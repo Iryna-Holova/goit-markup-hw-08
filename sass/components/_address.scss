@@ -1,0 +1,28 @@
+.address {
+  @extend %list;
+  @extend %font-text;
+  font-style: normal;
+}
+.address_item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address_maplink {
+  @include transition(color);
+  text-decoration: none;
+  color: $main-light;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+.address_link {
+  @extend %link;
+  @include transition(color);
+  color: $footer-text;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}

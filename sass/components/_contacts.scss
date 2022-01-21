@@ -1,0 +1,27 @@
+.contacts {
+  @extend %list;
+  @extend %font-header;
+  margin-left: auto;
+  display: flex;
+}
+.contacts_item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts_link {
+  @extend %link;
+  @include transition(color);
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $main;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+.contacts_icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

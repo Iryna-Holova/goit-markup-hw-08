@@ -1,0 +1,22 @@
+.logo {
+  @extend %link;
+  @extend %font-logo;
+  display: block;
+  color: $accent;
+}
+.logo--header {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  & .variable {
+    color: $main-dark;
+  }
+}
+.logo--footer {
+  margin-bottom: 20px;
+
+  & .variable {
+    color: $main-light;
+  }
+}

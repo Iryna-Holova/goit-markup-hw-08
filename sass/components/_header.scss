@@ -1,0 +1,14 @@
+.header {
+  @extend %container;
+  border-bottom: 1px solid $border-header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 8;
+  background-color: $main-light;
+}
+.header_container {
+  @extend %container;
+  display: flex;
+}

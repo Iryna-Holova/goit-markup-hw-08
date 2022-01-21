@@ -1,0 +1,40 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients_container {
+  @extend %container;
+}
+.clients_title {
+  @extend %marginoff;
+  @extend %font-section-title;
+}
+.clients_list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+}
+.clients_item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients_link {
+  @include border($icons);
+  @include transition(border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  color: $icons;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+    border-color: $accent;
+  }
+}
+.clients_icon {
+  @include transition(color);
+  fill: currentColor;
+}

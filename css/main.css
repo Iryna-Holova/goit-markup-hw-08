@@ -133,7 +133,7 @@ body {
 
 @media (min-width: 800px) {
   body {
-    background-color: orange;
+    background-color: #e5e5e5;
     padding-top: 80px;
   }
 }

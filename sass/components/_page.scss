@@ -1,5 +1,40 @@
-.page {
-  padding-top: 80px;
-  background-color: $main-light;
+body {
+  padding-top: 60px;
   font-family: 'Roboto', sans-serif;
+
+  @media (min-width: 800px) {
+    background-color: orange;
+    padding-top: 80px;
+  }
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

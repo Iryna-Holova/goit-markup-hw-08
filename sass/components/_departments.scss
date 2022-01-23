@@ -1,15 +1,17 @@
 .departments {
   padding-bottom: 94px;
-}
-.departments_container {
-  @extend %container;
+  background-color: $main-light;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .departments_title {
-  @extend %marginoff;
   @extend %font-section-title;
+  font-size: 36px;
+  margin-bottom: 50px;
 }
 .departments_list {
-  @extend %list;
   display: flex;
 }
 .departments_item {
@@ -23,7 +25,6 @@
   display: block;
 }
 .departments_text {
-  @extend %marginoff;
   @extend %font-text-title;
   position: absolute;
   bottom: 0;

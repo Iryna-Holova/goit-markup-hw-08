@@ -13,114 +13,141 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body class="page">
+  <body>
     <!-- header -->
     <header class="header">
-      <div class="header_container">
+      <div class="container">
         <a lang="en" href="./index.html" class="logo logo--header"
           >Web<span class="variable">Studio</span></a
         >
-        <nav>
-          <ul class="navigation">
-            <li class="navigation_item">
-              <a href="./index.html" class="navigation_link navigation_link--current">Студия</a>
+        <button class="menu-button" type="button" is-open
+        aria-expanded="false"
+        aria-controls="menu-container"
+        data-menu-button>
+          <svg class="" width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="icon-cross" href="./images/icons.svg#cross"></use>
+                <use class="icon-menu" href="./images/icons.svg#menu"></use>
+              </svg>
+        </button>
+        <div class="menu" id="menu-container" data-menu>
+          <nav>
+            <ul class="navigation">
+              <li class="navigation_item">
+                <a href="./index.html" class="navigation_link navigation_link--current">Студия</a>
+              </li>
+              <li class="navigation_item">
+                <a href="./portfolio.html" class="navigation_link">Портфолио</a>
+              </li>
+              <li class="navigation_item"><a href="" class="navigation_link">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="contacts">
+            <li class="contacts_item">
+              <a lang="en" href="mailto:info@devstudio.com" class="contacts_link">
+                <svg class="contacts_icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="navigation_item">
-              <a href="./portfolio.html" class="navigation_link">Портфолио</a>
+            <li class="contacts_item">
+              <a href="tel:+380961111111" class="contacts_link">
+                <svg class="contacts_icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
-            <li class="navigation_item"><a href="" class="navigation_link">Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="contacts">
-          <li class="contacts_item">
-            <a lang="en" href="mailto:info@devstudio.com" class="contacts_link">
-              <svg class="contacts_icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts_item">
-            <a href="tel:+380961111111" class="contacts_link">
-              <svg class="contacts_icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="social-links">
+            <li class="social-links_item">
+              <a class="social-links_link" href="https://www.instagram.com/" aria-label="Instagram">Instagram</a>
+            </li>
+            <li class="social-links_item">
+              <a class="social-links_link" href="https://twitter.com/" aria-label="Twitter">Twitter</a>
+            </li>
+            <li class="social-links_item">
+              <a class="social-links_link" href="https://facebook.com/" aria-label="Facebook">Facebook</a>
+            </li>
+            <li class="social-links_item">
+              <a class="social-links_link" href="https://linkedin.com/" aria-label="Linkedin">Linkedin</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
       <!-- hero -->
       <section class="hero">
-        <h1 class="hero_title">
-          Эффективные решения<br />
-          для вашего бизнеса
-        </h1>
-        <button type="button" class="hero_button" data-modal-open>Заказать услугу</button>
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <button type="button" class="modal_close-button" data-modal-close>
-              <svg width="18" height="18" class="modal_close-icon">
-                <use href="./images/icons.svg#close"></use>
-              </svg>
-            </button>
-            <form class="form">
-              <h2 class="form_title">Оставьте свои данные, мы вам перезвоним</h2>
-              <div class="form_field">
-                <label class="form_label" for="name">Имя</label>
-                <span class="form_icon-wrapper">
-                  <input class="form_input" type="text" name="name" id="name" />
-                  <svg width="18" height="18" class="form_icon">
-                    <use href="./images/icons.svg#person"></use>
-                  </svg>
-                </span>
-              </div>
-              <div class="form_field">
-                <label class="form_label" for="tel">Телефон</label>
-                <span class="form_icon-wrapper">
-                  <input class="form_input" type="tel" name="tel" id="tel" />
-                  <svg width="18" height="18" class="form_icon">
-                    <use href="./images/icons.svg#phone"></use>
-                  </svg>
-                </span>
-              </div>
-              <div class="form_field">
-                <label class="form_label" for="mail">Почта</label>
-                <span class="form_icon-wrapper">
-                  <input class="form_input" type="email" name="mail" id="mail" />
-                  <svg width="18" height="18" class="form_icon">
-                    <use href="./images/icons.svg#email"></use>
-                  </svg>
-                </span>
-              </div>
-              <div class="form_field">
-                <label class="form_label" for="comment">Комментарий</label>
-                <textarea
-                  class="form_textarea"
-                  name="comment"
-                  id="comment"
-                  rows="8"
-                  placeholder="Введите текст"
-                ></textarea>
-              </div>
-              <label class="form_checkbox-label"
-                >Соглашаюсь с рассылкой и принимаю
-                <input class="form_checkbox-input" type="checkbox" name="policy" />
-                <a class="form_checkbox-link href="">Условия договора</a>
-                <svg width="16" height="15" class="form_checkbox-icon">
-                  <use href="./images/icons.svg#check"></use>
+        <div class="container">
+          <h1 class="hero_title">
+            Эффективные решения<br />
+            для вашего бизнеса
+          </h1>
+          <button type="button" class="hero_button" data-modal-open>Заказать услугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button type="button" class="modal_close-button" data-modal-close>
+                <svg width="18" height="18" class="modal_close-icon">
+                  <use href="./images/icons.svg#close"></use>
                 </svg>
-              </label>
-              <button class="form_submit-button" type="submit">Отправить</button>
-            </form>
+              </button>
+              <form class="form">
+                <h2 class="form_title">Оставьте свои данные, мы вам перезвоним</h2>
+                <div class="form_field">
+                  <label class="form_label" for="name">Имя</label>
+                  <span class="form_icon-wrapper">
+                    <input class="form_input" type="text" name="name" id="name" />
+                    <svg width="18" height="18" class="form_icon">
+                      <use href="./images/icons.svg#person"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="form_field">
+                  <label class="form_label" for="tel">Телефон</label>
+                  <span class="form_icon-wrapper">
+                    <input class="form_input" type="tel" name="tel" id="tel" />
+                    <svg width="18" height="18" class="form_icon">
+                      <use href="./images/icons.svg#phone"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="form_field">
+                  <label class="form_label" for="mail">Почта</label>
+                  <span class="form_icon-wrapper">
+                    <input class="form_input" type="email" name="mail" id="mail" />
+                    <svg width="18" height="18" class="form_icon">
+                      <use href="./images/icons.svg#email"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="form_field">
+                  <label class="form_label" for="comment">Комментарий</label>
+                  <textarea
+                    class="form_textarea"
+                    name="comment"
+                    id="comment"
+                    rows="8"
+                    placeholder="Введите текст"
+                  ></textarea>
+                </div>
+                <label class="form_checkbox-label"
+                  >Соглашаюсь с рассылкой и принимаю
+                  <input class="form_checkbox-input" type="checkbox" name="policy" />
+                  <a class="form_checkbox-link href="">Условия договора</a>
+                  <svg width="16" height="15" class="form_checkbox-icon">
+                    <use href="./images/icons.svg#check"></use>
+                  </svg>
+                </label>
+                <button class="form_submit-button" type="submit">Отправить</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
       <!-- features -->
       <section class="features">
-          <div class="features_container">
+          <div class="container">
             <h2 hidden>Особенности</h2>
             <ul class="features_list">
               <li class="features_item">
@@ -172,7 +199,7 @@
       </section>
       <!-- work -->
       <section class="departments">
-          <div class="departments_container">
+          <div class="container">
             <h2 class="departments_title">Чем мы занимаемся</h2>
             <ul class="departments_list">
               <li class="departments_item">
@@ -192,7 +219,7 @@
       </section>
       <!-- team -->
       <section class="team">
-          <div class="team_container">
+          <div class="container">
             <h2 class="team_title">Наша команда</h2>
             <ul class="team_list">
               <li class="team_card">
@@ -348,7 +375,7 @@
       </section>
       <!-- clients -->
       <section class="clients">
-        <div class="clients_container">
+        <div class="container">
           <h2 class="clients_title">Постоянные клиенты</h2>
           <ul class="clients_list">
             <li class="clients_item">
@@ -399,8 +426,8 @@
     </main>
     <!-- footer -->
     <footer class="footer">
-      <div class="footer_container">
-        <div>
+      <div class="container">
+        <div class="footer_main">
           <a lang="en" href="./index.html" class="logo logo--footer"
           >Web<span class="variable">Studio</span></a
         >
@@ -472,5 +499,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

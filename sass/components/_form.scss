@@ -1,9 +1,8 @@
 .form {
-  width: 528px;
+  width: 100%;
   padding: 40px;
 }
 .form_title {
-  @extend %marginoff;
   @extend %font-form-title;
   margin-bottom: 12px;
   color: $main-dark;
@@ -76,9 +75,14 @@
   padding-left: 36.38px;
   margin-bottom: 30px;
   color: $main;
+
+  @media screen and (max-width: 1199px) {
+    padding-left: 23px;
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .form_checkbox-link {
-  @extend %link;
   color: $accent;
 }
 .form_checkbox-input {
@@ -103,6 +107,10 @@
   .form_checkbox-input:hover ~ &,
   .form_checkbox-input:focus ~ & {
     border-color: $accent;
+  }
+
+  @media screen and (max-width: 1199px) {
+    left: 0;
   }
 }
 .form_submit-button {

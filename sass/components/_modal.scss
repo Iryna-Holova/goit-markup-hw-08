@@ -1,15 +1,25 @@
 .modal {
   @include transition(opacity);
   @include transition(transform);
-  min-width: 528px;
-  min-height: 581px;
+  position: relative;
   border-radius: 4px;
   background-color: $main-light;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  margin: 0 auto;
+
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+    min-height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 .modal_close-icon {
   fill: currentColor;

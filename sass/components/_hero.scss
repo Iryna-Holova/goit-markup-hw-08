@@ -1,5 +1,5 @@
 .hero {
-  width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
   background-color: $bgdark;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.3)),
@@ -7,17 +7,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 35%;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .hero_title {
-  @extend %marginoff;
   @extend %font-hero;
   margin-bottom: 30px;
   color: $main-light;
   text-transform: uppercase;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 .hero_button {
   @extend %button;

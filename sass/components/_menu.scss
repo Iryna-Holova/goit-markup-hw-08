@@ -35,9 +35,9 @@
   fill: currentColor;
 }
 .menu {
-  width: 100%;
-
   @media screen and (max-width: 767px) {
+    width: 100vh;
+    height: 100vh;
     display: none;
     position: absolute;
     top: 0;
@@ -46,14 +46,17 @@
     z-index: 1;
     padding: 40px;
     padding-bottom: 48px;
-    vertical-align: stretch;
 
     &.is-open {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
     }
   }
 
   @media screen and (min-width: 768px) {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,10 +65,6 @@
 .navigation {
   @extend %font-menu;
   color: $main-dark;
-
-  @media screen and (max-width: 767px) {
-    margin-bottom: 302px;
-  }
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -129,6 +128,7 @@
   }
 
   @media screen and (max-width: 767px) {
+    margin-top: auto;
     margin-bottom: 64px;
   }
 
